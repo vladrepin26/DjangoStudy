@@ -15,7 +15,10 @@ def contact_view(request, *args, **kwargs):
 
 
 def about_view(request, *args, **kwargs):
-    return render(request, "about.html", {})
+    my_context = {
+        "title": "About page",
+    }
+    return render(request, "about.html", my_context)
 
 
 def social_view(request, *args, **kwargs):
